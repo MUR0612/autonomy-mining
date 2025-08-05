@@ -12,6 +12,7 @@ enum class RobotState {
     MOVE_FORWARD,
     OBSTACLE_DETECTED,
     TURN_LEFT,
+    TURN_DOWN,
     STOP
 };
 
@@ -22,10 +23,10 @@ public:
     void update(bool obstacleDetected);    // 更新狀態
     std::string getCurrentStateName() const; // 取得目前狀態名稱
     RobotState getCurrentState() const;    // 可用於邏輯控制
+    void transitionTo(RobotState newState);
 
 private:
     RobotState currentState;
-    void transitionTo(RobotState newState);
 };
 
 #endif // AUTONOMYKIT_FSMCONTROLLER_HPP

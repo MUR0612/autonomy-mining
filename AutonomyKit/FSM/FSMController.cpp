@@ -23,6 +23,9 @@ void FSMController::update(bool obstacleDetected) {
         case RobotState::TURN_LEFT:
             transitionTo(RobotState::MOVE_FORWARD);
         break;
+        case RobotState::TURN_DOWN:
+            transitionTo(RobotState::MOVE_FORWARD);
+        break;
         case RobotState::STOP:
             // 停止狀態不做變更
                 break;
@@ -35,6 +38,7 @@ std::string FSMController::getCurrentStateName() const {
         case RobotState::MOVE_FORWARD: return "MOVE_FORWARD";
         case RobotState::OBSTACLE_DETECTED: return "OBSTACLE_DETECTED";
         case RobotState::TURN_LEFT: return "TURN_LEFT";
+        case RobotState::TURN_DOWN: return "TURN_DOWN";
         case RobotState::STOP: return "STOP";
         default: return "UNKNOWN";
     }

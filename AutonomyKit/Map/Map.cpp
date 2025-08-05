@@ -62,3 +62,7 @@ double Map::getDistanceToObstacle(int x, int y, int dx, int dy) const {
     return 1000.0; // 表示前方很遠都沒障礙
 }
 
+std::vector<std::vector<int>> Map::toGrid() const {
+    return grid;
+}
+

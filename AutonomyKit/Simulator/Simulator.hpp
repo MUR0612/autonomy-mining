@@ -23,8 +23,9 @@ private:
     FSMController fsm;
     Logger logger;
 
-    int directionX = 1; // 預設向右
-    int directionY = 0; // 預設向右
+    int directionX; // 車頭方向X
+    int directionY; // 車頭方向Y
+    int goalX, goalY;
 };
 
 #endif  // AUTONOMYKIT_SIMULATOR_HPP

@@ -26,6 +26,9 @@ public:
     // 根據座標回傳距離前方最近障礙物的距離
     double getDistanceToObstacle(int x, int y, int dx, int dy) const;
 
+    // 加入 toGrid() 函式
+    std::vector<std::vector<int>> toGrid() const;
+
 private:
     int width, height;
     std::vector<std::vector<int>> grid;
